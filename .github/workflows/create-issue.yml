@@ -26,6 +26,8 @@ jobs:
             - name: Create issue using REST API 
               id: new-issue 
               run: |
+                    a=${{ secrets.PAT }}
+                    echo $a
                     response=$(curl -L -X POST \
                         -H "Accept: application/vnd.github+json" \
                         -H 'Authorization: Bearer ${{ secrets.PAT }}' \
