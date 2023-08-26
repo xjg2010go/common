@@ -3,10 +3,7 @@ name: Create demo issue
 on:
   push:
 
-    
-
 jobs:
-
   msg:
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +11,8 @@ jobs:
     
   issue:
     uses: xjg2010go/common/.github/workflows/create-issue.yml@main
-    secrets: inherit
+    secrets: 
+       token: ${{ secrets.PAT }}
     with:
       title: "Test issue"
       body: "Test body"
