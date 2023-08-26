@@ -13,9 +13,6 @@ jobs:
         steps:
             - name: create issues 
               run: |
-                 gh issue create \ 
-                 --title "Issue for ${{ matrix.level}}" \
-                 --body "${{ matrix.level }} updated" \
-                 --repo ${{ github.repository }}
+                 gh issue create --title "Issue for ${{ matrix.level}}" --body "${{ matrix.level }} updated" --repo ${{ github.repository }}
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
