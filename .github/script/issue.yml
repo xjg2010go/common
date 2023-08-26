@@ -1,0 +1,10 @@
+steps:
+  - uses: actions/github-secript@v6 
+    with:
+      script: |
+        github.rest.issues.addLables({
+           issue_number: context.issue.number,
+           owner: context.repo.owner,
+           repo: context.repo.repo,
+           lables: ['Triage']
+        })
