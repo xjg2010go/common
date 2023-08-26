@@ -7,7 +7,8 @@ jobs:
   msg:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Simple demo for reusable workflow"
+      - run: |
+          echo "SHA of my secret: $(echo -n "${{ secrets.MY_REPO_SECRET }}" | sha256sum)"
     
   issue:
     uses: xjg2010go/common/.github/workflows/create-issue.yml@main
