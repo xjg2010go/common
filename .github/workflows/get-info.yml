@@ -11,7 +11,7 @@ jobs:
       - run: echo "Simple demo for reusable workflow"
     
   issue:
-    uses: rndrepos/common/.github/workflows/create-repo-issue.yml@main
+    uses: xjg2010go/common/.github/workflows/create-repo-issue.yml@main
     secrets: inherit
     with:
       title: "Test issue"
