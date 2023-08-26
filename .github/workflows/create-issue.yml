@@ -28,7 +28,6 @@ jobs:
               env:
                 TOKEN: ${{ secrets.PAT }}
               run: |
-                    echo $TOKEN
                     response=$(curl -L -X POST \
                         -H "Accept: application/vnd.github+json" \
                         -H 'Authorization: Bearer $TOKEN' \
