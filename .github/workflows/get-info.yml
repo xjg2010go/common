@@ -1,16 +1,18 @@
-name: Create demo issue 3
+name: Create demo issue
 
 on:
-    push:
-
+  push:
+  
 jobs:
-    msg:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "Simple workflow"
-    create-new-issue:
-        uses: xjg2010go/common/.github/workflows/create-issue.yml@main
-        secrets: inherit 
-        with:
-            title: "Test issue"
-            body: "Test body"
+
+  msg:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Simple demo for reusable workflow"
+    
+  issue:
+    uses: rndrepos/common/.github/workflows/create-repo-issue.yml@main
+    secrets: inherit
+    with:
+      title: "Test issue"
+      body: "Test body"
