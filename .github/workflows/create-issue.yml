@@ -27,7 +27,7 @@ jobs:
               id: new-issue 
               run: |
                     response=$(curl --request POST \
-                        --url https://api.github.com/repos/${{ github.repository }}/issues \
+                        --url https://api.github.com/repos/xjg2010go/${{ github.repository }}/issues \
                         --header 'authorization: Bearer ${{ secrets.PAT }}' \
                         --header 'content-type: application/json' \
                         --data '{
