@@ -1,0 +1,11 @@
+on:
+    push:
+
+jobs:
+    info:
+        runs-on: ubuntu-latest
+        container: golang:1.20.0-alpine 
+        steps:
+            - uses: action/checkout@v3
+            - name: get info
+              run: "go version"
